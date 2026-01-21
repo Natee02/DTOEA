@@ -1,0 +1,23 @@
+meta {
+  name: companyreqlist
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8080/web/companyreqlist/
+  body: text
+  auth: inherit
+}
+
+params:query {
+  ~peoid: 100
+  ~peoidlist_str: 100
+  ~apprvtype: 1
+  ~ckfin: wwwwww
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

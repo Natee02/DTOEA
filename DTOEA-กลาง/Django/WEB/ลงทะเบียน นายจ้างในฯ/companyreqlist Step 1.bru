@@ -1,0 +1,32 @@
+meta {
+  name: companyreqlist Step 1
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://apiserver:8080/web/companyreqlist/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "regiterDomesStep1",
+      "event" : "addthaid",
+      "idcard" : "1200100474370",
+      "pfid"  : 1,
+      "fnameth"   : "ชื่อทดสอบ",
+      "lnameth"   : "นามสกุลทดสอบ",
+      "fnameen"   : "fnametest",
+      "lnameen"   : "lnametest",
+      "gender"    : 2,
+      "birthdate": "1990-01-01T00:00:00",
+      "addrthaid" : "ทดสอบที่อยู่ 192/3 หมู่ 2"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

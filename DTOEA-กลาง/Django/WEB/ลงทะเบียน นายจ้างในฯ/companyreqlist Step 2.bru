@@ -1,0 +1,45 @@
+meta {
+  name: companyreqlist Step 2
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/web/companyreqlist/7/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "regiterAgentStep2",
+      "reqid" : 7,
+      "document_list" : [
+          {
+              "did" : 313,
+              "filename" : "filename.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 3,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          },        
+          {
+              "did" : 40,
+              "filename" : "filename3.pdf",
+              "uploaddate" : "2023-09-02T15:13:04.435521+07:00"
+          }
+      ]
+   }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

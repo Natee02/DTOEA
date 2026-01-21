@@ -1,0 +1,23 @@
+meta {
+  name: companyreqlist Step 3 SubmitRegiterAgent
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/web/companyreqlist/7/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "SubmitRegiterAgent",
+      "reqid" : 7
+   }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
