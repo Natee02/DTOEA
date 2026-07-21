@@ -1,7 +1,7 @@
 meta {
   name: trainingschedule แก้ไข
   type: http
-  seq: 3
+  seq: 2
 }
 
 put {
@@ -15,7 +15,9 @@ body:json {
       "action": "editTrainingScheduleInfo",
       "pvid": 32,
       "trid": 5262,
-      "trdate": "2026-06-06",
+      "starttrdate": "2026-06-06",
+      "stoptrdate": "2027-06-06",
+      "bc1": 1,
       "starttime" : 17,
       "stoptime" : 25,
       "traintype" : 1,
@@ -27,4 +29,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
