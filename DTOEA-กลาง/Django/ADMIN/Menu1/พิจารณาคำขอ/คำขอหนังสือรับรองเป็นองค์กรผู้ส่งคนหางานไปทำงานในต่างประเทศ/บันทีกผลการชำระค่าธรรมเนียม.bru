@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/request/5/
+  url: http://apiserver:8080/admin/request/291/
   body: json
   auth: inherit
 }
@@ -13,10 +13,10 @@ put {
 body:json {
   {
       "action" : "senderreqlist-receipt",
-      "pincode" : "0000", //PIN code
-      "reason" : "", //เหตุผล
-      "bookcode": "เหตุผลการแก้ไข",     // เล่มที่ใบรับเงิน
-      "paycode": "P001",     // เลขที่ใบรับเงิน
+      "pincode" : null, //PIN code
+      "reason" : "เหตุผลการแก้ไข 2", //เหตุผล
+      "bookcode": "B111",     // เล่มที่ใบรับเงิน
+      "paycode": "P002",     // เลขที่ใบรับเงิน
       "paydate": "2026-04-09T00:00:00"   // วันที่ชำระเงิน
   }
 }
