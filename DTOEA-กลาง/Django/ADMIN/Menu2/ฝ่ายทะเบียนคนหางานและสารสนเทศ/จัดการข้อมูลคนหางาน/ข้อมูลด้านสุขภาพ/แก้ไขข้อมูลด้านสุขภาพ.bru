@@ -1,0 +1,32 @@
+meta {
+  name: แก้ไขข้อมูลด้านสุขภาพ
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/seekerdtl/121/
+  body: json
+  auth: inherit
+}
+
+params:query {
+  ~name: 
+}
+
+body:json {
+  {
+      "action" : "updateHealth",
+      "ckcongen" : 2,
+      "congen" : "ความดัน",
+      "blood" : 1,
+      "ckdrug":2,
+      "drug":"เอสไพริน"
+    
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
