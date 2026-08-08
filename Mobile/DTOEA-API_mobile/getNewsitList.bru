@@ -1,11 +1,11 @@
 meta {
   name: getNewsitList
   type: http
-  seq: 28
+  seq: 29
 }
 
 get {
-  url: https://test-toea.doe.go.th/toeacontent.php?task=getNewSitList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1&namenews=ทดสอบ&month=03&year=2025&typenews=1
+  url: http://custweb/toeacontent.php?task=getNewSitList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1
   body: none
   auth: inherit
 }
@@ -16,10 +16,10 @@ params:query {
   sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
   csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
   page: 1
-  namenews: ทดสอบ
-  month: 03
-  year: 2025
-  typenews: 1
+  ~namenews: ทดสอบ
+  ~month: 03
+  ~year: 2025
+  ~typenews: 1
   ~typenews: 2
 }
 
