@@ -13,10 +13,10 @@ post {
 body:json {
   {
       "action" : "approveRequest",
-      "event" : "updateTraingRoomReq", //ถ้ามีปรับแก้ห้องอบรม ต้องส่ง event นี้มา
-      "trtype": 2,
-      "tscid": 10, //ถ้าเป็น อบรม ณสำนักงาน ต้องใส่มา
-      "reqid" : 1434033,
+      // "event" : "updateTraingRoomReq", //ถ้ามีปรับแก้ห้องอบรม ต้องส่ง event นี้มา
+      // "trtype": 2,
+      // "rsid": 11, //ถ้าเป็น อบรม ณสำนักงาน ต้องใส่มา
+      "reqid" : 210,
       "apptype" : 1,
       "appstatus" : 1,
       "description" : "เหตุผลประกอบการพิจารณา"
@@ -25,4 +25,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
