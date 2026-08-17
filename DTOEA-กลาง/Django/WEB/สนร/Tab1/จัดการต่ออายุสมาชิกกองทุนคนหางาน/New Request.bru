@@ -1,0 +1,45 @@
+meta {
+  name: New Request
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/web/fund/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "renewFund",
+      "paytype": 2,
+      "baid": 15,
+      "cheqcode": "CHQ20260317001",
+      "bosstype": 2,
+      "comtype": 1,
+      "comcode" : "290837952",
+      "bossfnameen": "shang wang precision industry co.,ltd.",
+      "idtid": 5567,
+      "cntid" : 1196,  
+      "fcitid" : 1,
+      "address": "no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.",
+      "bosspostcode" : null,    
+      "tel": "0000000000",
+      "fax": "0000000000",
+      "document_list" : [
+          {   
+              "did" : 313,
+              "filename" : "filename.pdf"
+          },        
+          {
+              "did" : 2,
+              "filename" : "filename2.pdf"
+          } 
+      ]       
+  }
+}
+
+settings {
+  encodeUrl: true
+}
