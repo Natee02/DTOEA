@@ -1,0 +1,22 @@
+meta {
+  name: จนท. Click เข้าพิจารณาคำขอ
+  type: http
+  seq: 24
+}
+
+put {
+  url: http://apiserver:8080/admin/request/1434035/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "updateClickConsider"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

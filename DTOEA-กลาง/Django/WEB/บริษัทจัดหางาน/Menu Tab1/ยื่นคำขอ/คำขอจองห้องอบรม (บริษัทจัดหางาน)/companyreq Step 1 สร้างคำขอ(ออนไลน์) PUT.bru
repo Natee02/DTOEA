@@ -1,7 +1,7 @@
 meta {
-  name: companyreq Step 1 สร้างคำขอ_1
+  name: companyreq Step 1 สร้างคำขอ(ออนไลน์) PUT
   type: http
-  seq: 2
+  seq: 4
 }
 
 put {
@@ -14,14 +14,15 @@ body:json {
   {
       "action" : "requestTraingRoomStep1",
       "rtid" : 113,
-      "cid" : 5267,
+      "cid" : 5,
       "jt3id" : 1,
-      "trtype" : 2,
-      "tscid": 10 // เฉพาะเลือกอบรม ณ สำนักงาน
+      "trtype" : 1
+      // "tscid": 10 // เฉพาะเลือกอบรม ณ สำนักงาน
       // "refreqid" : 1434023, //ได้มาจากคำขอ จง.27 ที่อนุมัติแล้ว
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

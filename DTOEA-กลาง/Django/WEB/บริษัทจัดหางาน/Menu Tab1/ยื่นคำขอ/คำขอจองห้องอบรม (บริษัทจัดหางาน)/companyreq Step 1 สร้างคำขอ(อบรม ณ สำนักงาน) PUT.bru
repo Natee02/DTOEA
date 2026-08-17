@@ -1,11 +1,11 @@
 meta {
-  name: companyreq Step 1 สร้างคำขอ
+  name: companyreq Step 1 สร้างคำขอ(อบรม ณ สำนักงาน) PUT
   type: http
-  seq: 1
+  seq: 3
 }
 
-post {
-  url: http://apiserver:8080/web/companyreq/
+put {
+  url: http://apiserver:8080/web/companyreq/10/
   body: json
   auth: inherit
 }
@@ -14,14 +14,15 @@ body:json {
   {
       "action" : "requestTraingRoomStep1",
       "rtid" : 113,
-      "cid" : 5267,
+      "cid" : 5,
       "jt3id" : 1,
-      "trtype" : 1
-      // "tscid": 10 // เฉพาะเลือกอบรม ณ สำนักงาน
+      "trtype" : 2,
+      "rsid": 11 // เฉพาะเลือกอบรม ณ สำนักงาน
       // "refreqid" : 1434023, //ได้มาจากคำขอ จง.27 ที่อนุมัติแล้ว
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
