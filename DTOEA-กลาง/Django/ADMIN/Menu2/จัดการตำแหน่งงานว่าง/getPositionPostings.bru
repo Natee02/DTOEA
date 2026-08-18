@@ -5,19 +5,20 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/positionpostings?jid=1005
+  url: http://apiserver:8090/admin/positionpostings?status=1
   body: none
   auth: inherit
 }
 
 params:query {
-  jid: 1005
+  status: 1
+  ~jid: 1005
   ~actby: 1
   ~jpoid: 
   ~biid: 
-  ~bossfname: test
+  ~bossfnameen: STEEL
   ~poid: 1
-  ~status: 1
+  ~cntid: 1066
 }
 
 settings {
