@@ -1,0 +1,45 @@
+meta {
+  name: companyreq บันทึกคำขอ
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/request/119/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editRequestJ27",
+      "tsubmit" : 2,
+      "adpeoid" : 100,
+      "adojid" : 1,
+      "pincode" : "1234",
+      // "twpartner" : 1,
+      // "twcid" : 101,
+      "comtype": 1,
+      "comcode" : "290837952",
+      "bossfnameen": "shang wang precision industry co.,ltd.",
+      "idtid": 5567,
+      "address": "no.7, lane 236, zhengguang st., yonglong village, taiping dist., taichung city, taiwan r.o.c.",
+      "cntid" : 1196,  
+      "fcitid" : 10,
+      "bosspostcode" : null,
+      "fax" : null,
+      "tel" : null,
+      "email" : "tesemail@gmail.com",
+      "actpeoid" : 100, //กอง/สำนักงานจัดหางาน
+      "actojid" : 1,
+      "depart" : "หน่วยงานกลุ่ม / ฝ่าย", // หน่วยงานกลุ่ม / ฝ่าย
+      "postion" : "ตำแหน่ง", //ตำแหน่ง
+      "remark" : "สาเหตุ", // สาเหตุ
+      "filename" : "filename.pdf",
+      "uploaddate" : "2023-09-02"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
