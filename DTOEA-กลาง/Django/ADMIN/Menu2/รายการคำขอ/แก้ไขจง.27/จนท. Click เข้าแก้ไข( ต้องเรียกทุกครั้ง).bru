@@ -1,0 +1,21 @@
+meta {
+  name: จนท. Click เข้าแก้ไข( ต้องเรียกทุกครั้ง)
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/request/119/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "clickToEditRequestJ27"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

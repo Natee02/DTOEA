@@ -1,0 +1,49 @@
+meta {
+  name: seekerreq ตำแหน่ง แก้ไขคนหางาน (lgbit=2)
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/seekerreq/461/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editSeekerPositionReqListJ27",
+      "reqid" : 202,
+      "poid" : 10,
+      "ojid" : 222,
+      "passportno" : "AC8552554",
+      "issuedate" : "2023-09-02",
+      "expdate" : "2023-09-01",
+      "visacode" : "VS966332858",
+      "visadate" : "2023-09-02",
+      "visaexpire" : "2026-09-01",
+      "wtid": 2,
+      "wage" : 300000,
+      "curid": 1,
+      "rate" : 1,
+      "thrate" : 30,
+      "salary" : 300000,
+      "empyear" : 1,
+      "empmonth" : 1,
+      "empday" : 1,
+      "payservice" : 10000,
+      "paypos" : 10000,
+      "paytdoc" : 10000,
+      "paydoc" : 10000,
+      "payvisa" : 10000,
+      "payseeker" : 10000,
+      "otherdesc" : 10000,
+      "payother" : 10000,
+      "paydate" : "2026-02-01",
+      "paytype" : 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}
