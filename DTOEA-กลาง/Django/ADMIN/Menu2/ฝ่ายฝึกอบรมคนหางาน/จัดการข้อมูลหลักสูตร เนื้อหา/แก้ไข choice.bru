@@ -1,0 +1,24 @@
+meta {
+  name: แก้ไข choice
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://apiserver:8080/admin/answer/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "edit-answer",
+    "answer" : "แก้ไขไม่ใช่", //ตัวเลือก
+    "cstatus" : "2" //(1,"ถูกต้อง"),(2,"ไม่ถูกต้อง")
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

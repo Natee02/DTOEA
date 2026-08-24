@@ -1,11 +1,11 @@
 meta {
   name: แก้ไข หลักสูตร
   type: http
-  seq: 7
+  seq: 10
 }
 
 put {
-  url: http://apiserver:8080/admin/course/5/
+  url: http://apiserver:8080/admin/course/2/
   body: json
   auth: inherit
 }
@@ -17,13 +17,13 @@ body:json {
     "objective": "เพื่อให้ผู้ใช้งานเข้าใจระบบ", // วัตถุประสงค์
     "cstatus": 1,                           // สถานะ (0=ไม่ใช้งาน, 1=ใช้งาน)
     "link": "https://example.com/video",   // ลิงก์วิดีโอ
-    "lengthclip": "00:30:00",              // ความยาววิดีโอ (hh:mm:ss)
+    "lengthclip": "00:00:30",              // ความยาววิดีโอ (hh:mm:ss)
     "questduring": 1,                      // มีคำถามระหว่างอบรม (1=มี, 2=ไม่มี)
-    "setlimit": 60,                        // กำหนดเวลาในการตอบคำถาม (วินาที)
+    "setlimit": 30,                        // กำหนดเวลาในการตอบคำถาม (วินาที)
     "question_list" : [
       {
-        "setperiod": "00:00:50", //(ชั่วโมง:นาที:วินาที)
-        "qtid": 8 //รหัสคำถามระหว่างอบรม
+        "setperiod": "00:00:40", //(ชั่วโมง:นาที:วินาที)
+        "qtid": 1 //รหัสคำถามระหว่างอบรม
       }
     ]
   }

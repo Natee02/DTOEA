@@ -1,18 +1,18 @@
 meta {
-  name: ลบ หลักสูตร
+  name: ลบ choice
   type: http
-  seq: 11
+  seq: 6
 }
 
 put {
-  url: http://apiserver:8080/admin/course/5/
+  url: http://apiserver:8080/admin/answer/4/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "action" : "delete-course"
+    "action" : "delete-answer"
   }
 }
 
