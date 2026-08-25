@@ -5,13 +5,14 @@ meta {
 }
 
 get {
-  url: http://apiserver:8090/admin/positionpostings?status=1
+  url: http://apiserver:8090/admin/positionpostings?status=1&biidlist=22,23,24,25
   body: none
   auth: inherit
 }
 
 params:query {
   status: 1
+  biidlist: 22,23,24,25
   ~jid: 1005
   ~actby: 1
   ~jpoid: 
