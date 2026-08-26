@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/credit/18/
+  url: http://apiserver:8080/admin/credit/46/
   body: json
   auth: inherit
 }
@@ -13,7 +13,7 @@ put {
 body:json {
   {
     "action" : "edit-credit",
-    "ojid": 118,            // ข้อมูลคนหางาน (FK → seekerDtl.id)
+    "ojid": 121,            // ข้อมูลคนหางาน (FK → seekerDtl.id)
     "baid": 1,            // ข้อมูลธนาคาร (FK → bankInfo.id)
     "bankother": "สาขาย่อย",                 // อื่นๆ
     "branch": "สาขากรุงเทพ",                  // สาขา
@@ -21,13 +21,14 @@ body:json {
     "gtype": 1,                              // ประเภทหลักประกัน (1=เงินฝาก,...,6=อื่นๆ)
     "gother": null,                          // หลักประกันอื่น
     "address": "123/45 กรุงเทพ",             // ที่อยู่
-    "pvid": 10,              // ข้อมูลจังหวัด
-    "ddtid": 101,            // ข้อมูลอำเภอ
-    "sdtid": 1001,           // ข้อมูลตำบล
+    "pvid": null,              // ข้อมูลจังหวัด
+    "ddtid": null,            // ข้อมูลอำเภอ
+    "sdtid": null,           // ข้อมูลตำบล
     "loandate": "2026-01-01T00:00:00",      // วันที่ออกหนังสือ
     "loanexpdate": "2027-01-01T00:00:00",   // วันหมดอายุหนังสือ
     "reqid": null,           // ตารางข้อมูลคำขอ
     "description" : "สาเหตุการแก้ไข", //สาเหตุการแก้ไข
+    "pfid" : 2,
     "upload_list" : [
       {
         "id": 38, //Fixed สำเนาบัตรประชาชน required
