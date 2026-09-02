@@ -1,24 +1,21 @@
 meta {
-  name: getJobsList
+  name: getWorkHistoryDetail
   type: http
-  seq: 38
+  seq: 91
 }
 
 get {
-  url: https://test-toea.doe.go.th/toeacontent.php?task=getJobsList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1&bossname=SIAM
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getJobsDetail&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&ppoid=1
   body: none
   auth: inherit
 }
 
 params:query {
-  task: getJobsList
+  task: getJobsDetail
   sendTime: 20260326190023
   sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
   csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
-  page: 1
-  bossname: SIAM
-  ~poname: พ่อครัว
-  ~ctid: 1066
+  ppoid: 1
 }
 
 settings {
