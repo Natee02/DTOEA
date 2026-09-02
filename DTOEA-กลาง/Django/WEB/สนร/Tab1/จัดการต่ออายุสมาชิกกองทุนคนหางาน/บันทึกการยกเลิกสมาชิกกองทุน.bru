@@ -1,0 +1,25 @@
+meta {
+  name: บันทึกการยกเลิกสมาชิกกองทุน
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/fund/7/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "updateFundCancel",
+      "resrefund" : 1,
+      "tcancel" : 2,
+      "remarkcan" : "สาเหตุการยกเลิก อื่นๆ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}
