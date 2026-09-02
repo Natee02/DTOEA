@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: https://test-toea.doe.go.th/toeacontent.php?task=getJobsDetail&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&ppoid=1
+  url: https://test-toea.doe.go.th/toeacontent.php?task=getWorkHistoryDetail&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&skplid=1
   body: none
   auth: inherit
 }
 
 params:query {
-  task: getJobsDetail
+  task: getWorkHistoryDetail
   sendTime: 20260326190023
   sessionid: hqcjag6wixcwgaciche5x5yfyf15gcwr
   csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
-  ppoid: 1
+  skplid: 1
 }
 
 settings {
@@ -24,6 +24,5 @@ settings {
 }
 
 docs {
-  poname ชื่อตำแหน่ง
-  ctid รหัสประเทศ
+  skplid รหัสความสัมพันธ์ระหว่างคนหางาน และตำแหน่งงาน
 }
