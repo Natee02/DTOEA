@@ -1,0 +1,31 @@
+meta {
+  name: crime เพิ่ม
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/web/crime/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addCrimeInfo",
+      "checkdate": "2024-05-20",
+      "result": 1,
+      "ojid": 101,
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

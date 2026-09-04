@@ -1,0 +1,41 @@
+meta {
+  name: test เพิ่ม
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/web/test/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addTestInfo",
+      "testtype": 1,
+      "branchname": "สาขาช่างเชื่อมโลหะ",
+      "posname": "ช่างเชื่อมไฟฟ้า",
+      "placename": "ศูนย์ฝึกอบรมฝีมือแรงงาน",
+      "placeaddr": "123 หมู่ 5 ถ.มิตรภาพ",
+      "postcode": "10110",
+      "status": 1,
+      "ojid": 101,
+      "tpid": 5000,
+      "coutid": 5000,
+      "pvid": 1,
+      "ddtid": 1,
+      "sdtid": 1,
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}
