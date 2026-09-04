@@ -1,0 +1,34 @@
+meta {
+  name: trainingInfo เพิ่ม
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://apiserver:8080/admin/web/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addTrainingInfo",
+      "cosname": "หลักสูตรการพัฒนาซอฟต์แวร์",
+      "placename": "ห้องประชุมอาคาร A",
+      "tmonth": 0,
+      "tday": 5,
+      "thour": 30,
+      "ojid": 1001,
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

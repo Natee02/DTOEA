@@ -1,0 +1,16 @@
+meta {
+  name: training
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://apiserver:8090/web/training
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

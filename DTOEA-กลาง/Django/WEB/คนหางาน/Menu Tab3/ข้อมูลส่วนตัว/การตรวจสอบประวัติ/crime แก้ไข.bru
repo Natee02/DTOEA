@@ -1,0 +1,31 @@
+meta {
+  name: crime แก้ไข
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/crime/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editCrimeInfo",
+      "checkdate": "2024-05-20",
+      "result": 1,
+      "ojid": 101,
+      "document_list" : [
+          {
+              "did" : 37,
+              "filename" : "filename.pdf"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}
