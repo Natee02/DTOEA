@@ -1,0 +1,29 @@
+meta {
+  name: trainingInfo แก้ไข
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/training/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "editTrainingInfo",
+      "cosname": "หลักสูตรการพัฒนาซอฟต์แวร์",
+      "placename": "ห้องประชุมอาคาร A",
+      "tmonth": 0,
+      "tday": 5,
+      "thour": 30,
+      "ojid": 101
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

@@ -1,0 +1,23 @@
+meta {
+  name: อัปโหลดเอกสารแนบ
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/fund/7/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "updateFundReceipt",
+      "filename" : "filename.pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

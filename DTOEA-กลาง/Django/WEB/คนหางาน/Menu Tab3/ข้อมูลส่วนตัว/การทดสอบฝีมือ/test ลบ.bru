@@ -1,0 +1,22 @@
+meta {
+  name: test ลบ
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/test/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deletetTestInfo"
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

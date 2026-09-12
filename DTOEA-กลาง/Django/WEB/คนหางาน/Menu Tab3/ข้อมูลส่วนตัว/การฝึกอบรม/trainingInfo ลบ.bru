@@ -1,0 +1,22 @@
+meta {
+  name: trainingInfo ลบ
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/web/training/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteTrainingInfo"
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

@@ -1,0 +1,23 @@
+meta {
+  name: reserveInfo ลบ
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/admin/reserve/5261/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "deleteReserveInfoViewSet"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

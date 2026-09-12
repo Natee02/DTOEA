@@ -1,11 +1,11 @@
 meta {
   name: บันทึกการยกเลิกสมาชิกกองทุน
   type: http
-  seq: 1
+  seq: 2
 }
 
 put {
-  url: http://apiserver:8080/admin/fund/7/
+  url: http://apiserver:8080/web/fund/7/
   body: json
   auth: inherit
 }
@@ -15,12 +15,11 @@ body:json {
       "action" : "updateFundCancel",
       "resrefund" : 1,
       "tcancel" : 2,
-      "refunddate" : "2026-09-09",
       "remarkcan" : "สาเหตุการยกเลิก อื่นๆ"
   }
 }
 
 settings {
   encodeUrl: true
-  timeout: 0
+  forwardAuthorizationHeader: false
 }
