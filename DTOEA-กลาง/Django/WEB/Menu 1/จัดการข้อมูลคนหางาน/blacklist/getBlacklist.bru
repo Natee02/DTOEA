@@ -1,0 +1,21 @@
+meta {
+  name: getBlacklist
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/web/blacklist/{id}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~ojid: 121
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

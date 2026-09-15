@@ -1,0 +1,29 @@
+meta {
+  name: editBlacklist
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/web/blacklist/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "editBlacklist",
+    "ojid": 121,
+    "cntid": 1066,
+    "bltype": 2,
+    "cause": 1,
+    "description": "แก้ไขเป็น watchlist"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
