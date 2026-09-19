@@ -1,0 +1,43 @@
+meta {
+  name: createComplain
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/web/complain/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "createComplain",
+    "ojid": 136,
+    "reqid": 1434043,
+    "pfid": 1,
+    "fnameth": "ทดสอบ",
+    "lnameth": "อันแรก",
+    "idcard": "1234567890123",
+    "relation": "ตนเอง",
+    "pvid": 10,
+    "address": "123/4 ถนนพหลโยธิน",
+    "tel": "0812345678",
+    "fax": "021234567",
+    "email": "test@example.com",
+    "helptype": 3,
+    "detail": null,
+    "status": 1,
+    "filename1": "passport.pdf",
+    "uploaddate1": "2026-09-19T10:00:00",
+    "filename2": "contract.pdf",
+    "uploaddate2": "2026-09-19T10:05:00"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

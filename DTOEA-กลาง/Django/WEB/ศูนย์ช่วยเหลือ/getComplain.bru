@@ -1,0 +1,21 @@
+meta {
+  name: getComplain
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/web/complain?ojid=136
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ojid: 136
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
