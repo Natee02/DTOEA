@@ -1,0 +1,26 @@
+meta {
+  name: updatecomplain
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/complain/1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action":"updatecomplain",
+    "helptype": 3,
+    "status": 2,
+    "detail": "โดนบิด"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
