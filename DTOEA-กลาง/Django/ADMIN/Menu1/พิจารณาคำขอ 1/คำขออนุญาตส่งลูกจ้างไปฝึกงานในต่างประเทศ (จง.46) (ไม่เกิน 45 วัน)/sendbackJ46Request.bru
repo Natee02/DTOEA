@@ -4,16 +4,16 @@ meta {
   seq: 7
 }
 
-post {
-  url: http://apiserver:8080/admin/approve/
+put {
+  url: http://apiserver:8080/admin/request/126/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "action": "approveRequest",
-      "reqid": 10,
+      "action": "approve",
+      "reqid": 126,
       "appstatus": 2,
       "apptype": 1,
       "detail": "test send back"
