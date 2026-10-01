@@ -1,7 +1,0 @@
-info:
-  name: คำขอแจ้งความต้องการตำแหน่งงานว่าง (Demand)
-  type: folder
-  seq: 1
-
-request:
-  auth: inherit
