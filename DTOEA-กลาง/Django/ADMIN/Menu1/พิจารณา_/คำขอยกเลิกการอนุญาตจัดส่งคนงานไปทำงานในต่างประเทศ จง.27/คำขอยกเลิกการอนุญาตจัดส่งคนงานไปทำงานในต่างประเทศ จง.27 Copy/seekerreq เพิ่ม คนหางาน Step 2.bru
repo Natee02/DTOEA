@@ -1,0 +1,27 @@
+meta {
+  name: seekerreq เพิ่ม คนหางาน Step 2
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/web/companyreq/38/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addSeekerCancelRequestJ27Step2",
+      "seeker_list" : [
+          {
+              "sojid" : 1029 //คนหางานที่ได้มาจากยื่น  จง.27
+          }    
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

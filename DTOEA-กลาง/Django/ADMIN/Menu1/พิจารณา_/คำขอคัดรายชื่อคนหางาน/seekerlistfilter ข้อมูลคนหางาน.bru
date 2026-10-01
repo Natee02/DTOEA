@@ -1,0 +1,57 @@
+meta {
+  name: seekerlistfilter ข้อมูลคนหางาน
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8080/web/seekerlistfilter/?reqid=251&scid=5&cid=5&workstatus=3&sj1id=1714&j1idlist=5281
+  body: json
+  auth: inherit
+}
+
+params:query {
+  @description('บังคับใส่ *')
+  reqid: 251
+  @description('บังคับใส่ *')
+  scid: 5
+  cid: 5
+  workstatus: 3
+  @description('อันนี้ใช้สำหรับช่อง ค้นหา')
+  sj1id: 1714
+  @description('อันนี้ใช้กรองตามคุณสมบัติตำแหน่ง')
+  j1idlist: 5281
+  @description('อันนี้ใช้สำหรับช่อง ค้นหา')
+  ~idcard: 4847059845475
+  @description('อันนี้ใช้สำหรับช่อง ค้นหา')
+  ~fullname_th_like: จิรภา
+  @description('อันนี้ใช้สำหรับช่อง ค้นหา')
+  ~spvid: 
+  @description('อันนี้ใช้กรองตามคุณสมบัติจังหวัด')
+  ~pvidlist: 5
+  @description('อันนี้ใช้กรองตามคุณสมบัติเพศ')
+  ~gender: 1
+  @description('อันนี้ใช้กรองตามคุณสมบัติวุฒิฯ')
+  ~dgid: 1
+  @description('อันนี้ใช้กรองตามคุณสมบัติอายุตั้งแต่')
+  ~s_startage: 25
+  @description('อันนี้ใช้กรองตามคุณสมบัติอายุถึง')
+  ~s_stopage: 30
+  @description('อันนี้ใช้กรองตามคุณสมบัติประสบกาณณ์ตั้งแต่')
+  ~s_startexp: 
+  @description('อันนี้ใช้กรองตามคุณสมบัติประสบกาณณ์ถึง')
+  ~s_stopexp: 
+  @description('อันนี้ใช้กรองตามคุณสมบัติประสบกาณณ์ถึง')
+  ~s_startw: 
+  @description('อันนี้ใช้กรองตามคุณสมบัติน้ำหนักถึง')
+  ~s_stopw: 
+  @description('อันนี้ใช้กรองตามคุณสมบัติส่วนสูงตั้งแต่')
+  ~s_starth: 160
+  @description('อันนี้ใช้กรองตามคุณสมบัติส่วนสูงถึง')
+  ~s_stoph: 170
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

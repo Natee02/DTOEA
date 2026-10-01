@@ -1,0 +1,34 @@
+meta {
+  name: yuanUseHist
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://apiserver:8080/admin/yuanuse/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "typeedit": 1,
+      "ynid": "2",
+      "reqid": "1434030",
+      "reqcode": "EL69-000004",
+      "jt3id": "2",
+      // "jt3num": jt3.jtnum,
+      "poid": "3007",
+      "jid_id": 2001,
+      "numsend": 1,
+      "cid": "5267",
+      "description": "Approve Request - จัดส่ง: {obj.nameth",
+      "idtid_id":5567
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

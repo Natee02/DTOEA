@@ -1,0 +1,22 @@
+meta {
+  name: admindtl
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8090/admin/admindtl?peoid=100&ojidnotlist=1,100&apprvtype=2
+  body: none
+  auth: inherit
+}
+
+params:query {
+  peoid: 100
+  ojidnotlist: 1,100
+  apprvtype: 2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
