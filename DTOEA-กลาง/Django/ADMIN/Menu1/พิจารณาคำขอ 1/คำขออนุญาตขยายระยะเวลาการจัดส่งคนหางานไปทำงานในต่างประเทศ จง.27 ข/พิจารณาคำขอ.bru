@@ -1,0 +1,27 @@
+meta {
+  name: พิจารณาคำขอ
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/request/126/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "approve",
+      "reqid" : 126,
+      "apptype" : 1,
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

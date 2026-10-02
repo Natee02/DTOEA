@@ -1,0 +1,26 @@
+meta {
+  name: ส่งกลับแก้ไข
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/request/1434048/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      // "action" : "approve",
+      // "reqid" : 1434033,
+      "apptype" : 1,
+      "appstatus" : 2,
+      "description" : "เหตุผลประกอบการพิจารณา"
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

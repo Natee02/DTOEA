@@ -1,0 +1,23 @@
+meta {
+  name: seekerreq ตำแหน่ง ลบ คนหางาน
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/seekerreq/2/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "deleteSeekerPositionReqList",
+      "sojid" : 107
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

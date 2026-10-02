@@ -1,0 +1,30 @@
+meta {
+  name: พิจารณาคำขอ
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/request/126/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "approve",
+      // "event" : "updateTraingRoomReq", //ถ้ามีปรับแก้ห้องอบรม ต้องส่ง event นี้มา
+      // "trtype": 2,
+      // "trid": 2, //ถ้าเป็น อบรมออนไลน์ ต้องใส่มา
+      // "rsid": 11, //ถ้าเป็น อบรม ณสำนักงาน ต้องใส่มา
+      "reqid" : 241,
+      "apptype" : 1,
+      "appstatus" : 1,
+      "description" : "เหตุผลประกอบการพิจารณา"
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

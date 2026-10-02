@@ -1,0 +1,27 @@
+meta {
+  name: sendbackJ46Request
+  type: http
+  seq: 7
+}
+
+put {
+  url: http://apiserver:8080/admin/request/126/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "approve",
+      "reqid": 126,
+      "appstatus": 2,
+      "apptype": 1,
+      "detail": "test send back"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

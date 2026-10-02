@@ -1,0 +1,23 @@
+meta {
+  name: ยกเลิกคำขอ
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/web/request/46/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "cancelJCCancelJ27",
+      "description" : "ยกเลิกคำขอ (Cancel)"
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

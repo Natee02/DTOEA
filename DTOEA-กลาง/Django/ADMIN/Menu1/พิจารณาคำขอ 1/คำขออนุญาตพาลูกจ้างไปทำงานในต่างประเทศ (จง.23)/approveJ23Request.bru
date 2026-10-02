@@ -1,0 +1,27 @@
+meta {
+  name: approveJ23Request
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/admin/request/126/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action": "approve",
+      "reqid": 126,
+      "appstatus": 1,
+      "apptype": 4,
+      "detail": ""
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

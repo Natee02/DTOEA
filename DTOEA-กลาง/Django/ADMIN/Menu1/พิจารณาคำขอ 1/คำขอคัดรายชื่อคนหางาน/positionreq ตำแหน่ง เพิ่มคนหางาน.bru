@@ -1,0 +1,33 @@
+meta {
+  name: positionreq ตำแหน่ง เพิ่มคนหางาน
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://apiserver:8080/admin/positionreq/215/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "action" : "addSeekerPositionReqList",
+      "reqid": 251,
+      "projid" : 38,
+      "poid" : 29,
+      "seeker_list" : [
+          {
+              "sojid" : 131
+          },
+          {
+              "sojid" : 124
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}
