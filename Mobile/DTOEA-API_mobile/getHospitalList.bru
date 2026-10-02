@@ -1,11 +1,11 @@
 meta {
   name: getHospitalList
   type: http
-  seq: 13
+  seq: 14
 }
 
 get {
-  url: https://test-toea.doe.go.th/toeacontent.php?task=getHospitalList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1
+  url: http://custweb/toeacontent.php?task=getHospitalList&sendTime=20260326190023&sessionid=hqcjag6wixcwgaciche5x5yfyf15gcwr&csrftoken=POyN2pGNVW6BRVhk68bAC156LcpPi3eb&page=1
   body: none
   auth: inherit
 }
@@ -17,6 +17,9 @@ params:query {
   csrftoken: POyN2pGNVW6BRVhk68bAC156LcpPi3eb
   page: 1
   ~pvid: 32
+  ~hpname: ซีบี
+  ~hptype: 1
+  ~hptype: 2
 }
 
 settings {

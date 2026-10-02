@@ -1,0 +1,16 @@
+meta {
+  name: getInterdtl
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://apiserver:8090/admin/interdtl
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

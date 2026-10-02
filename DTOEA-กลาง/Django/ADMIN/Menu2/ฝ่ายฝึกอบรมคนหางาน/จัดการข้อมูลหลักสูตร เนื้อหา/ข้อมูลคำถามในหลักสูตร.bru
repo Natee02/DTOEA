@@ -1,17 +1,18 @@
 meta {
   name: ข้อมูลคำถามในหลักสูตร
   type: http
-  seq: 10
+  seq: 13
 }
 
 get {
-  url: http://apiserver:8080/admin/coursequesttraining?csid=2
+  url: http://apiserver:8080/admin/coursequesttraining?qtid=1
   body: none
   auth: inherit
 }
 
 params:query {
-  csid: 2
+  qtid: 1
+  ~csid: 2
 }
 
 settings {

@@ -1,0 +1,22 @@
+meta {
+  name: ลบ choice
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/answer/4/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "delete-answer"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/questtraining/1/
+  url: http://apiserver:8080/admin/questtraining/2/
   body: json
   auth: inherit
 }
@@ -13,19 +13,8 @@ put {
 body:json {
   {
     "action" : "edit-questtraining",
-    "title": "คำถามตัวอย่าง2?",   // หัวข้อคำถาม
-    "status": 1,                // สถานะคำถาม (0=ไม่ใช้งาน, 1=ใช้งาน)
-    "cchoice": 2,                // จำนวนตัวเลือก
-    "choice_list" : [
-      {
-        "answer" : "ใช่", //ตัวเลือก
-        "cstatus" : "1" //(1,"ถูกต้อง"),(2,"ไม่ถูกต้อง")
-      },
-      {
-        "answer" : "ไม่ใช่", //ตัวเลือก
-        "cstatus" : "2" //(1,"ถูกต้อง"),(2,"ไม่ถูกต้อง")
-      }
-    ]
+    "title": "คำถามตัวอย่าง12",   // หัวข้อคำถาม
+    "status": 0              // สถานะคำถาม (0=ไม่ใช้งาน, 1=ใช้งาน)
   }
 }
 

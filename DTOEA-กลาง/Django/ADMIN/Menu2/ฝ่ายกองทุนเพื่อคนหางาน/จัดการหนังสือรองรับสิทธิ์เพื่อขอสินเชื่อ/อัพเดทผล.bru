@@ -5,7 +5,7 @@ meta {
 }
 
 put {
-  url: http://apiserver:8080/admin/credit/13/
+  url: http://apiserver:8080/admin/credit/52/
   body: json
   auth: inherit
 }
@@ -18,8 +18,8 @@ body:json {
     "amount" : 2000.50,
     "typeloan" : 1, //(1,"ตนเองเป็นผู้ยื่น"),(2,"บุคคลอื่นยื่น"),
     "loanname" : "ทดสอบ", //ชื่อ - นามสกุล (ผู้ยื่นขอกู้เงินสินเชื่อ)
-    "remark" : null, //สาเหตุไม่ผ่านสินเชื่อ
-    "description" : null //สาเหตุการแก้ไข
+    "remark" : "สาเหตุไม่ผ่านสินเชื่อ", //สาเหตุไม่ผ่านสินเชื่อ
+    "description" : "แก้ไข"//สาเหตุการแก้ไข
   }
 }
 

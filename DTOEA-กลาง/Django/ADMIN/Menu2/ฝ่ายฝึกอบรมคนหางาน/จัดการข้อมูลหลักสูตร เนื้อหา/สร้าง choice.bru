@@ -1,0 +1,25 @@
+meta {
+  name: สร้าง choice
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://apiserver:8080/admin/answer/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "create-anwser",
+    "qtid" : 2, //id คำถาม
+    "answer" : "ใช่", //ตัวเลือก
+    "cstatus" : "1" //(1,"ถูกต้อง"),(2,"ไม่ถูกต้อง")
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
