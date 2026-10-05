@@ -1,0 +1,17 @@
+meta {
+  name: getJob
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8090/web/job/2001
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
