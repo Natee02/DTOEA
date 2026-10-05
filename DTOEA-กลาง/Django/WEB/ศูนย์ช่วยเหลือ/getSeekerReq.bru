@@ -1,0 +1,21 @@
+meta {
+  name: getSeekerReq
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://apiserver:8090/web/seekerreq?reqid=1434023
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: 1434023
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
