@@ -1,0 +1,35 @@
+meta {
+  name: createRound
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://apiserver:8080/admin/mgmtsendsk/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "stype":2,
+    "tsend":3,
+    "outdate":"2026-11-27T00:00:00",
+    "dtlhour":10,
+    "dtlmin":0,
+    "travelout":4,
+    "travelno":"KE652",
+    "trid":5269,
+    "roomtype":11,
+    "reservedate":"2026-11-10T00:00:00",
+    "jt3date":"2026-10-19T00:00:00",
+    "trtype":2
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

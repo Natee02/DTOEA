@@ -1,0 +1,28 @@
+meta {
+  name: pay
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://apiserver:8080/admin/fund/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action":"payFundGov",
+    "reqid":<601 id>,
+    "reqid_id":<601 id>,
+    "seeker_list":[{"ojid":129}],
+    "paytype":1
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
