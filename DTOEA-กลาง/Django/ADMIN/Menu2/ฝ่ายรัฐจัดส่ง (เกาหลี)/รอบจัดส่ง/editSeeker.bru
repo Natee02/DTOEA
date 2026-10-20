@@ -1,0 +1,52 @@
+meta {
+  name: editSeeker
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/sendseeker/{id}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "comtype":1,
+    "comcode":"KR-001",
+    "bosscomp":"TEST KOREA CO., LTD.",
+    "name":"TEST KOREA CO., LTD.",
+    "cntid":1125,
+    "idtid":1,
+    "address":"1 Test-ro, Seoul",
+    "fcitid":41,
+    "postcode":"04524",
+    "tel":"0212345678",
+    "fax":"-",
+    "email":"test@example.com",
+    "samebossproj":1,
+    "jid":1000,
+    "jobdesc":"manufacturing",
+    "wtid":1,
+    "wage":2000000,
+    "curid":1,
+    "rate":1000,
+    "thrate":25,
+    "empyear":3,
+    "empmonth":0,
+    "empday":0,
+    "endjob":"2029-11-27T00:00:00",
+    "document_list":[{
+      "id":84,
+      "filename":"x_84.pdf",
+      "uploaddate":"2026-10-19T00:00:00"
+      }]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
