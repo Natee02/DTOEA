@@ -1,0 +1,24 @@
+meta {
+  name: เลือกคำถามระหว่างอบรม
+  type: http
+  seq: 14
+}
+
+post {
+  url: http://apiserver:8080/admin/coursequesttraining/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action" : "check-questtraning",
+    "lengthclip": "00:01:50",   //ถ้าไม่มีค่า ส่งเป็น null
+    "setperiod": "00:01:00"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
