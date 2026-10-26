@@ -1,0 +1,33 @@
+meta {
+  name: pay (cheque)
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://apiserver:8080/admin/fund/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "payFundGov",
+    "reqid": {{reqid}},
+    "seeker_list": [
+      { "ojid": {{ojid}} }
+    ],
+    "paytype": 2,
+    "baid": {{baid}},
+    "cheqcode": "CHQ-0001234"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  เช็ค: baid = bankInfo.id (ธนาคาร), cheqcode = หมายเลขเช็ค. Same rules and errors as "10 pay - cash".
+}

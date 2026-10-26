@@ -1,0 +1,27 @@
+meta {
+  name: getMemCard
+  type: http
+  seq: 12
+}
+
+get {
+  url: http://apiserver:8080/admin/fund/?reqid={{reqid}}&page_size=100
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: {{reqid}}
+  page_size: 100
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  fundInfo rows (บัตรสมาชิกกองทุน) of the 601, one per paid seeker.
+  fundno = E<code>/<nnnnn>/<ddmmyyyy พ.ศ.>, fundstatus 1 สมัคร, expdate = payment date + contract + 5 years,
+  appname/signname = ผู้ออกบัตร (the approver), cntid = country.
+}

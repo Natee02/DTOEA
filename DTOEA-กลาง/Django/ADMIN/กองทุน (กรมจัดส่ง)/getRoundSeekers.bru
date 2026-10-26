@@ -1,0 +1,26 @@
+meta {
+  name: getRoundSeekers
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://apiserver:8080/admin/sendseeker/?msid={{msid}}&page_size=100
+  body: none
+  auth: inherit
+}
+
+params:query {
+  msid: {{msid}}
+  page_size: 100
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  Seekers in the round (sendSeekerList). id = sslid for "09 cancel seeker". status 1 ปกติ / 0 ยกเลิก.
+  msid must be an existing round id (otherwise 400 "Select a valid choice").
+}

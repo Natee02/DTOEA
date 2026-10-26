@@ -1,0 +1,32 @@
+meta {
+  name: approve
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/request/1434140/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "approve",
+    "apptype": 1,
+    "appstatus": 1,
+    "description": "test"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  เจ้าหน้าที่พิจารณา (request at reqstatus 1) -> next level (3) or 12 if no further level.
+  Only appstatus 1 is allowed at this level for a 601.
+  If every seeker was cancelled meanwhile: 400 ERR_AMD.REQUESTINFO.GOVFUND_SEEKER_EMPTY and the 601 is now 10 คืนคำขอ.
+  Optional "pincode" if the page asks for the officer's PIN.
+}

@@ -1,0 +1,28 @@
+meta {
+  name: getApproveHist
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8080/admin/approvehist/?reqid={{reqid}}&page_size=100
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: {{reqid}}
+  page_size: 100
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ตาราง ผลการพิจารณา/อนุมัติ. One row per action, in order (sort by appdate).
+  apptype 1 เจ้าหน้าที่, 2 หัวหน้าฝ่าย, 3 หัวหน้ากลุ่ม, 4 ผอ., 5 รองอธิบดี, 6 อธิบดี, 55 = system
+  (system rows: appstatus 5 = คืนคำขอโดยระบบ, 4 = เกินกำหนดชำระเงิน).
+  appstatus 1 อนุมัติ, 2 ส่งเรื่องกลับ. Empty description -> show "-".
+}

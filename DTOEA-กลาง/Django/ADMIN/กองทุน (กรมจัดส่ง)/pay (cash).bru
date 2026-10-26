@@ -1,0 +1,37 @@
+meta {
+  name: pay (cash)
+  type: http
+  seq: 10
+}
+
+post {
+  url: http://apiserver:8080/admin/fund/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "payFundGov",
+    "reqid": {{reqid}},
+    "seeker_list": [
+      { "ojid": {{ojid}} },
+      { "ojid": {{ojid2}} }
+    ],
+    "paytype": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  บันทึกผลการชำระค่าธรรมเนียม (เจ้าหน้าที่ฝ่ายกองทุนฯ: peoid 100 + department 12 + bc1 Account).
+  One member card (fundInfo) per seeker; 601 -> 8 อนุมัติ only when every non-cancelled seeker has paid.
+  paytype: 1 เงินสด, 2 เช็ค, 3 อื่นๆ, 4 EDC.
+  Errors (400): SEEKER_LIST_REQUIRED, SEEKER_DUPLICATE, REQSTATUS_INVALID (601 not at 12), EXPDATE_PAY,
+  SEEKER_NOTFOUND, SEEKER_CANCELLED, PAYMENT_DUPLICATE, WORKSTATUS_INVALID, NO_PRIVILEGE_FUND, PRIVILEGE_PAYMENY
+  (all ERR_AMD.FUNDINFO.*).
+}

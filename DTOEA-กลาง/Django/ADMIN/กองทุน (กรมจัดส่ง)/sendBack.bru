@@ -1,0 +1,32 @@
+meta {
+  name: sendBack
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://apiserver:8080/admin/request/{{reqid}}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "approve",
+    "apptype": 2,
+    "appstatus": 2,
+    "description": "กรุณาตรวจสอบเอกสารอีกครั้ง"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ส่งเรื่องกลับให้เจ้าหน้าที่ระดับก่อนหน้า: 7->6, 6->5, 5->4, 4->3, 3->1. apptype = your level (same mapping as 05).
+  description is REQUIRED (400 ERR_AMD.APPROVEINFO.DESCRIPTION_REQUIRED).
+  Not allowed at reqstatus 1 (400 ERR_AMD.REQUESTINFO.APPSTATUS_INVALID).
+  appstatus 0 (ไม่อนุมัติ) and 5 (คืนคำขอ) are not allowed for a 601 either.
+}

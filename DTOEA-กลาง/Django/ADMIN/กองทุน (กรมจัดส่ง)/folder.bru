@@ -1,0 +1,31 @@
+meta {
+  name: กองทุน (กรมจัดส่ง)
+  seq: 20
+}
+
+auth {
+  mode: inherit
+}
+
+vars:pre-request {
+  ~msid: 0
+  ~reqid: 601
+  ~ojid: 0
+  ~ojid2: 0
+  ~sslid: 0
+  ~baid: 0
+}
+
+docs {
+  คำขอส่งเงินเข้ากองทุนฯ (กรมจัดส่ง) = rtid 601. Login with "login admin" first.
+  
+  Set the folder vars (Folder settings > Vars):
+  - msid  = mgmtSendSKInfo.id (round)
+  - reqid = the round's 601 requestInfo.id (from "02 get 601 of round")
+  - ojid / ojid2 = seekerDtl.id of seekers in the 601 (from "03 get 601 seekers")
+  - sslid = sendSeekerList.id of the seeker to cancel (from "08 get round seekers")
+  - baid  = bankInfo.id (cheque only)
+  
+  Flow: 01 send round -> 04 พิจารณา -> 05 approve each level -> (status 12) -> 10/11 pay -> 8 when everyone paid.
+  Errors come back as HTTP 400 {"non_field_errors": ["ERR_..."]}.
+}
