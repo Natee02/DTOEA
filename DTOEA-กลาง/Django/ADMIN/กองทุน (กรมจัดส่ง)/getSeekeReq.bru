@@ -1,0 +1,31 @@
+meta {
+  name: getSeekeReq
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://apiserver:8080/admin/seekerreq/?reqid={{reqid}}&lgbit=6&mar=0&page_size=100
+  body: none
+  auth: inherit
+}
+
+params:query {
+  reqid: {{reqid}}
+  lgbit: 6
+  mar: 0
+  page_size: 100
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  One row per seeker in the 601.
+  - regfund 2 = cancelled (show in red, not selectable for payment). null/1 = applying.
+  - fundstatus 1 = paid (not selectable again). funid = the member card (fundInfo).
+  - fundrate = amount per seeker (THB). Totals = sum over rows where regfund != 2.
+  - invoiceno (G...), ref1/ref2/paycode/billexpdate = filled when the 601 reaches 12.
+}

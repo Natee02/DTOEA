@@ -1,0 +1,27 @@
+meta {
+  name: sendRound (creates 601)
+  type: http
+  seq: 1
+}
+
+put {
+  url: http://apiserver:8080/admin/mgmtsendsk/49/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "send"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ส่งเรื่องรอบจัดส่ง. Creates the 601 (กองทุน, reqstatus 1, or 0 after hours) + 602 (อบรม, auto-approved 8)
+  and one seekerReqList row per seeker on each.
+}

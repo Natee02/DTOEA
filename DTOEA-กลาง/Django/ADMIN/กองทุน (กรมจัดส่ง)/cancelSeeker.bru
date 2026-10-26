@@ -1,0 +1,33 @@
+meta {
+  name: cancelSeeker
+  type: http
+  seq: 9
+}
+
+put {
+  url: http://apiserver:8080/admin/sendseeker/{{sslid}}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "actiontype": "cancel",
+    "remark": "คนหางานขอยกเลิกการสมัครสมาชิกกองทุน",
+    "filename": "cancel_doc.pdf"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  ยกเลิกการสมัครสมาชิกกองทุน และฝึกอบรม (เมนูจัดการรอบจัดส่ง). remark / filename optional.
+  - Round must be sent (400 ERR_AMD.SENDSEEKERLIST.ROUND_NOT_SENT).
+  - Seeker's 601 must be 0/1/12/13, else 400 "ERR_AMD.SENDSEEKERLIST.FUND_REQSTATUS_INVALID: <reqcode>".
+  - Already cancelled: 400 ERR_AMD.SENDSEEKERLIST.STATUS_INVALID.
+  Result: seekerReqList.regfund = 2 on the 601. If nobody is left the 601 becomes 10 คืนคำขอ;
+  at 12, if everyone left has paid it becomes 8 อนุมัติ.
+}

@@ -1,0 +1,29 @@
+meta {
+  name: getRound
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://apiserver:8080/admin/request/?rtid=601
+  body: none
+  auth: inherit
+}
+
+params:query {
+  rtid: 601
+  ~msid: 49
+  ~page_size: 50
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  A round normally has one 601 (resend can add more: take the newest id per seeker).
+  reqstatus: 0 รอลงรับ, 1 รอพิจารณา, 3 รออนุมัติจากหัวหน้าฝ่าย, 4 หัวหน้ากลุ่ม, 5 ผู้อำนวยการ,
+  6 รองอธิบดี, 7 อธิบดี, 12 รอชำระเงิน, 8 อนุมัติ, 10 คืนคำขอ, 13 เกินกำหนดชำระเงิน.
+  expdate = payment deadline. Always send page_size (default is 2).
+}
