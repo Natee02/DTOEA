@@ -1,0 +1,53 @@
+meta {
+  name: editSeeker
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/sendseeker/{id}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "appkey":"690110301",  // Normal (recruitInfo.idregister)
+    "comtype":1,
+    "comcode":"JP-001",
+    "bosscomp":"TEST JAPAN CO., LTD.",
+    "name":"TEST JAPAN CO., LTD.",
+    "cntid":1196,
+    "idtid":1,
+    "address":"1-1 Marunouchi, Chiyoda-ku",
+    "fcitid":288,
+    "postcode":"100-0001",
+    "tel":"0312345678",
+    "fax":"-",
+    "email":"test@example.com",
+    "samebossproj":1,
+    "jid":1000,
+    "jobdesc":"manufacturing",
+    "wtid":1,
+    "wage":200000,
+    "curid":17,
+    "rate":100,
+    "thrate":22,
+    "empyear":3,
+    "empmonth":0,
+    "empday":0,
+    "endjob":"2029-11-27T00:00:00",
+    "document_list":[{
+      "id":84,
+      "filename":"x_84.pdf",
+      "uploaddate":"2026-11-01T00:00:00"
+      }]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
