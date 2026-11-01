@@ -1,0 +1,27 @@
+meta {
+  name: approveFund
+  type: http
+  seq: 8
+}
+
+put {
+  url: http://apiserver:8080/admin/request/{601 id}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action":"approve",
+    "reqid":<601 id>,
+    "apptype":2,
+    "appstatus":1,
+    "description":"test"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
