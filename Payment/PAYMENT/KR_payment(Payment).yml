@@ -1,0 +1,43 @@
+info:
+  name: KR_payment(Payment)
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://custweb/payment.php?task=payment
+  params:
+    - name: task
+      value: payment
+      type: query
+  body:
+    type: json
+    data: |2-
+       {
+      "user":"ktblink",
+      "password":"T0EA1ink",
+      "comCode":"1010",
+      "prodCode":"1010",
+      "command":"payment",
+      "bankCode":6,
+      "bankRef":"K00002 00009876",
+      "dateTime":"20261105180029",
+      "effDate":"20180601",
+      "amount" :"110",
+      "channel":"2",
+      "ref1":"6025279372799",
+      "ref2":"69000017256909",
+      "ref3":"",
+      "ref4":""
+      }
+  auth:
+    type: basic
+    username: ktblink
+    password: T0EA1ink
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
