@@ -1,0 +1,108 @@
+{
+  "info": {
+    "name": "PAYMENT",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "KR_payment(Inquiry)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "T0EA1ink",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "ktblink",
+              "type": "string"
+            }
+          ]
+        },
+        "description": "",
+        "url": {
+          "raw": "http://custweb/payment.php?task=Inquiry",
+          "protocol": "http",
+          "host": [
+            "custweb"
+          ],
+          "path": [
+            "payment.php"
+          ],
+          "query": [
+            {
+              "key": "task",
+              "value": "Inquiry"
+            }
+          ],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": " {\n\"user\":\"ktblink\",\n\"password\":\"T0EA1ink\",\n\"comCode\":\"1010\",\n\"prodCode\":\"1010\",\n\"command\":\"Inquiry\",\n\"bankCode\":6,\n\"bankRef\":\"K00002 00009876\",\n\"dateTime\":\"20261105180029\",\n\"effDate\":\"20180601\",\n\"amount\" :\"110\",\n\"channel\":\"2\",\n\"ref1\":\"6025279372799\",\n\"ref2\":\"69000017256909\",\n\"ref3\":\"\",\n\"ref4\":\"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "KR_payment(Payment)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "T0EA1ink",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "ktblink",
+              "type": "string"
+            }
+          ]
+        },
+        "description": "",
+        "url": {
+          "raw": "http://custweb/payment.php?task=payment",
+          "protocol": "http",
+          "host": [
+            "custweb"
+          ],
+          "path": [
+            "payment.php"
+          ],
+          "query": [
+            {
+              "key": "task",
+              "value": "payment"
+            }
+          ],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": " {\n\"user\":\"ktblink\",\n\"password\":\"T0EA1ink\",\n\"comCode\":\"1010\",\n\"prodCode\":\"1010\",\n\"command\":\"payment\",\n\"bankCode\":6,\n\"bankRef\":\"K00002 00009876\",\n\"dateTime\":\"20261105180029\",\n\"effDate\":\"20180601\",\n\"amount\" :\"110\",\n\"channel\":\"2\",\n\"ref1\":\"6025279372799\",\n\"ref2\":\"69000017256909\",\n\"ref3\":\"\",\n\"ref4\":\"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "variable": []
+}
