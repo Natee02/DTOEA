@@ -1,0 +1,26 @@
+meta {
+  name: editRound
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://apiserver:8080/admin/mgmtsendsk/{id}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "travelno":"TG635",
+    "trid":5262,
+    "roomtype":6,
+    "reservedate":"2026-06-06T00:00:00"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
