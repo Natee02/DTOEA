@@ -1,0 +1,16 @@
+meta {
+  name: getRound
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://apiserver:8090/admin/mgmtsendsk/{id}
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  forwardAuthorizationHeader: false
+}

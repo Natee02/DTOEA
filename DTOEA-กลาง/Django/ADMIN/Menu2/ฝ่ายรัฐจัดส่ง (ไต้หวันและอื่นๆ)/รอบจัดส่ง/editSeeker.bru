@@ -1,0 +1,53 @@
+meta {
+  name: editSeeker
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://apiserver:8080/admin/sendseeker/{id}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "appkey":"6911-01-0001",  // Normal (recruitInfo.idtwregister)
+    "comtype":1,
+    "comcode":"TW-001",
+    "bosscomp":"TEST TAIWAN CO., LTD.",
+    "name":"TEST TAIWAN CO., LTD.",
+    "cntid":1066,
+    "idtid":1,
+    "address":"1 Zhongxiao W. Rd., Zhongzheng Dist.",
+    "fcitid":25,
+    "postcode":"10048",
+    "tel":"0223456789",
+    "fax":"-",
+    "email":"test@example.com",
+    "samebossproj":1,
+    "jid":1000,
+    "jobdesc":"manufacturing",
+    "wtid":1,
+    "wage":29500,
+    "curid":70,
+    "rate":100,
+    "thrate":105,
+    "empyear":3,
+    "empmonth":0,
+    "empday":0,
+    "endjob":"2029-11-27T00:00:00",
+    "document_list":[{
+      "id":84,
+      "filename":"x_84.pdf",
+      "uploaddate":"2026-11-09T00:00:00"
+      }]
+  }
+
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
